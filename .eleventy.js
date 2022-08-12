@@ -30,7 +30,9 @@ module.exports = function(c) {
     c.addDataExtension("yaml", yaml.parse);
 
     c.addPassthroughCopy({ "./src/static/": "/" });
-    c.addPassthroughCopy({ "./src/**/*.gif": "/" });
+    c.addPassthroughCopy("src/posts/**/*.gif");
+    c.addPassthroughCopy("src/posts/**/*.jpg");
+    c.addPassthroughCopy("src/posts/**/*.png");
 
     c.setServerPassthroughCopyBehavior("copy");
 
