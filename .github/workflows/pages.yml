@@ -34,7 +34,8 @@ jobs:
         uses: actions/setup-node@v3.4.1
       - name: Build 11ty site
         run: |
-          npm install
+          npm install --legacy-peer-deps
+          mkdir -p dist
           npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v1
@@ -42,7 +43,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: '.'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
