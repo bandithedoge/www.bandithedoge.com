@@ -1,0 +1,12 @@
+<aside class="container flex flex-row sm:flex-col sm:fixed h-16 sm:h-full w-full sm:w-64 sm:top-0 bg-light1 text-dark1 dark:bg-dark1 dark:text-light1">
+    <div class="w-16 h-16 sm:w-64 sm:h-64 flex-shrink-0">
+        <a href="{{ '/' | url }}"><img src="/img/icon.png" class="w-full h-full"/></a>
+    </div>
+    <div class="container flex flex-col w-full h-full bg-light1 dark:bg-dark1">
+        <div class="sidebar-links flex h-full w-full flex-row sm:flex-col justify-around sm:justify-start items-center text-center p-8">
+            <a href="{{ '/posts' | url }}">posts</a>
+            <a href="{{ '/things' | url }}">things</a>
+        </div>
+    </div>
+    <div class="hidden sm:flex justify-center bottom-0">{% include "./footer.html" %}</div>
+</aside>

@@ -1,0 +1,14 @@
+---
+layout: base.html
+---
+<!doctype html>
+
+<main class="container">
+    <div class="container flex justify-center">
+        <div class="p-8 w-fit bg-light2 text-center text-dark dark:bg-dark2 dark:text-light rounded">
+            <h1 class="text-4xl font-bold">{{ title }}</h1>
+            <span>Posted on {{ page.date | readableDate }}</span>
+        </div>
+    </div>
+    <div class="">{{ content | safe }}</div>
+</main>

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16pt;
+    @apply h-full w-full;
+}
+
+dd {
+    @apply ml-4;
+}
+
+figure {
+    @apply h-fit w-fit rounded bg-light1 p-2 dark:bg-dark2;
+    img {
+        @apply rounded;
+    }
+    figcaption {
+        @apply text-center;
+    }
+}
+
+.sidebar-links a {
+    @apply text-2xl text-accent sm:p-4 sm:text-3xl;
+}
+
+.header-anchor {
+    @apply text-light0 dark:text-dark0;
+    text-decoration: none;
+    font-size: 14pt;
+}
+
+.icon svg {
+    @apply h-4 w-4;
+}
+
+.socials svg {
+    @apply m-2 h-6 w-6;
+}
+
+.table-of-contents {
+    @apply sm:float-right sm:m-4 p-2 rounded bg-light2 dark:bg-dark2 prose-li:my-0 prose-ul:my-0 prose-h1:my-0 prose-h2:my-0 prose-h3:my-0 prose-h4:my-0;
+}

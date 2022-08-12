@@ -1,0 +1,151 @@
+// stolen from https://github.com/chawyehsu/base16-prism
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+code[class*="language-"],
+pre[class*="language-"] {
+    @apply text-base text-base05;
+    background: none;
+    font-family: "JetBrains Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+    @apply bg-base02;
+    color: inherit;
+    text-shadow: none;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+    @apply bg-base02;
+    color: inherit;
+    text-shadow: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    @apply bg-base02;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+    @apply text-base03;
+}
+
+.token.entity,
+.language-css .token.string,
+.style .token.string {
+    @apply bg-base01 text-base04;
+}
+
+.token.punctuation {
+    @apply text-base05;
+}
+
+.token.variable,
+.token.tag,
+.token.operator,
+.token.deleted {
+    @apply text-base08;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.constant,
+.token.url {
+    @apply text-base09;
+}
+
+.token.class-name,
+.token.bold {
+    @apply text-base0A;
+}
+
+.token.string,
+.token.symbol,
+.token.attr-value,
+.token.inserted,
+.token.atrule {
+    @apply text-base0B;
+}
+
+.token.regex,
+.token.important {
+    @apply text-base0C;
+}
+
+.token.function,
+.token.attr-name {
+    @apply text-base0D;
+}
+
+.token.keyword,
+.token.selector,
+.token.italic,
+.token.char,
+.token.builtin {
+    @apply text-base0E;
+}
+
+.token.doctype {
+    @apply text-base0F;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.namespace {
+    opacity: 0.7;
+}
