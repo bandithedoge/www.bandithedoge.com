@@ -8,24 +8,28 @@ tags: meta
 
 Over the years I've made a ton of things... 5% of which are even remotely worth mentioning. Here are the ones I'm actually willing to show off, in an order that not even I fully understand:
 
-# Active
+# YouTube
+
+[bandithedoge](https://www.youtube.com/@bandithedoge)
+: Main channel for my music, remixes, audio shitposts and the occasional video or live stream
+
+[misadventures in ludomusicology](https://www.youtube.com/@misadventuresinludomusicology)
+: Video game soundtrack remasters
+
+# Software
+
+## Active
 
 [shine](https://github.com/bandithedoge/shine)
 : Pandoc-based terminal renderer for multiple markup formats, inspired by [glow](https://github.com/charmbracelet/glow)
 
-[switch-pl](https://github.com/bandithedoge/switch-pl)
-: Nintendo Switch Polish translation
-
-[nimble2nix](https://github.com/bandithedoge/nimble2nix)
-: Painless Nimble dependencies in Nix derivations
-
 [PestCömp](https://github.com/bandithedoge/pestcomp)
 : Really shitty digital compressor
 
-# Dead
+## Dead
 
 [mpdcord](https://github.com/bandithedoge/mpdcord)
 : Discord Rich Presence for MPD written in Go
 
-[rplg](https://github.com/bandithedoge/rplg)
-: CLI browser for repology.org
+[switch-pl](https://github.com/bandithedoge/switch-pl)
+: Nintendo Switch Polish translation
