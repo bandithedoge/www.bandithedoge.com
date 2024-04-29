@@ -2,26 +2,26 @@ const postcss = require("postcss");
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const anchor = require("markdown-it-anchor");
-const { FontAwesomeIcon } = require("@campj/eleventy-fa-icons");
 const yaml = require("yaml");
 
-
-module.exports = function(c) {
+module.exports = function (c) {
     c.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
 
     c.addPlugin(require("@11ty/eleventy-plugin-rss"));
 
     c.addPlugin(require("eleventy-sass"), {
-        postcss: postcss([require("tailwindcss")])
+        postcss: postcss([require("tailwindcss")]),
     });
 
     c.addPlugin(require("@quasibit/eleventy-plugin-sitemap"), {
         sitemap: {
-            hostname: "http://bandithedoge.com"
-        }
+            hostname: "http://bandithedoge.com",
+        },
     });
 
-    c.addNunjucksShortcode("fa", FontAwesomeIcon);
+    c.addPlugin(require("eleventy-plugin-phosphoricons"), {
+        size: 24,
+    });
 
     c.addFilter("readableDate", (date) => {
         return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_FULL);
@@ -47,19 +47,19 @@ module.exports = function(c) {
                 permalink: anchor.permalink.ariaHidden({
                     placement: "after",
                     symbol: "#",
-                })
+                }),
             })
             .use(require("markdown-it-footnote"))
             .use(require("markdown-it-deflist"))
             .use(require("markdown-it-mark"))
             .use(require("markdown-it-table-of-contents"), {
                 listType: "ul",
-                includeLevel: [1, 2, 3, 4, 5, 6]
+                includeLevel: [1, 2, 3, 4, 5, 6],
             })
             .use(require("markdown-it-attrs"))
             .use(require("markdown-it-image-figures"), {
                 dataType: true,
-                figcaption: "alt"
+                figcaption: "alt",
             })
     );
 
