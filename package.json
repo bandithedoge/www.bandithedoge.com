@@ -21,18 +21,11 @@
         "markdown-it-image-figures": "^2.1.1",
         "markdown-it-mark": "^3.0.1",
         "markdown-it-table-of-contents": "^0.6.0",
-<<<<<<< Updated upstream
-        "postcss": "^8.4.31",
-        "prettier": "^2.7.1",
-        "prettier-plugin-tailwindcss": "^0.1.11",
-        "stylelint": "^15.10.1",
-=======
         "pandoc-wasm": "^0.0.2",
         "postcss": "^8.4.38",
         "prettier": "^2.8.8",
         "prettier-plugin-tailwindcss": "^0.1.13",
         "stylelint": "^14.16.1",
->>>>>>> Stashed changes
         "stylelint-config-standard-scss": "^4.0.0",
         "tailwindcss": "^3.4.3",
         "typescript": "^4.9.5",
