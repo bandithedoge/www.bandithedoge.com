@@ -1,0 +1,29 @@
+---
+layout: base.html
+title: things
+tags: meta
+---
+
+<div class="flex flex-wrap justify-items-center content-center">
+    {% for thing in things %}
+    <div class="m-4 p-4 max-w-md text-center content-center">
+        {% if thing.type == "github" %}
+        <a href="https://github.com/{{ thing.owner }}/{{ thing.repo }}"><img src="https://github-readme-stats.vercel.app/api/pin/?username={{ thing.owner }}&repo={{ thing.repo }}&show_owner=true"></a>
+        {% endif %}
+
+        {% if thing.type == "music" %}
+        <a href="{{ thing.link if thing.link else ["https://fanlink.tv/", thing.id] | join }}"><img src="/img/covers/{{ thing.id }}.jpg"></a>
+        <span class="">{{ thing.artist }} – {{ thing.name }}</span>
+        {% endif %}
+
+        {% if thing.type == "remaster" %}
+        <a href="{{ thing.link }}"><img src="/img/covers/{{ thing.id }}.jpg"></a>
+        <span class="">{{ thing.name }}</span>
+        {% endif %}
+
+        <br>
+        <span class="text-sm text-white">{{ thing.year }}</span>
+    </div>
+
+    {% endfor %}
+</div>

@@ -13,9 +13,7 @@
 <body class="bg-light text-dark dark:bg-dark dark:text-light">
     {% include "./includes/sidebar.html" %}
 
-    <div class="m-4 sm:m-8 sm:ml-72 prose dark:prose-invert max-w-none">{{ content | safe }}</div>
+    <div class="m-4 sm:m-8 sm:ml-72">{{ content | safe }}</div>
 
-    <div class="flex justify-center sm:hidden">
-        {% include "./includes/footer.html" %}
-    </div>
+    <div class="flex justify-center sm:hidden">{% include "./includes/footer.html" %}</div>
 </body>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 body {
     font-family: "Roboto Condensed", sans-serif;
@@ -24,6 +24,10 @@ figure {
     }
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .sidebar-links a {
     @apply text-2xl text-accent sm:p-4 sm:text-3xl;
 }
@@ -39,9 +43,9 @@ figure {
 }
 
 .socials svg {
-    @apply m-2 h-6 w-6;
+    @apply m-2 size-8;
 }
 
 .table-of-contents {
-    @apply sm:float-right sm:m-4 p-2 rounded bg-light2 dark:bg-dark2 prose-li:my-0 prose-ul:my-0 prose-h1:my-0 prose-h2:my-0 prose-h3:my-0 prose-h4:my-0;
+    @apply rounded bg-light2 p-2 prose-h1:my-0 prose-h2:my-0 prose-h3:my-0 prose-h4:my-0 prose-ul:my-0 prose-li:my-0 sm:float-right sm:m-4 dark:bg-dark2;
 }

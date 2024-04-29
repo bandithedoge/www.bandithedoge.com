@@ -1,18 +1,17 @@
-<footer class="flex flex-col items-center text-light0 dark:text-dark0 text-sm p-4">
+<footer class="flex flex-col items-center p-4 text-sm text-light0 dark:text-dark0">
     <div class="socials flex flex-wrap justify-center">
         {% for link in links %}
-        <a href="{{ link.url }}">{% fa name=link.icon, type = "brand" %}</a>
+        <a href="{{ link.url }}">{% phosphor link.icon %}</a>
         {% endfor %}
     </div>
 
-    <span class="text-base">{{ buildDate.year }} ©️ bandithedoge</span>
+    <div class="flex flex-row text-base">{{ buildDate.year }} {% phosphor "copyright" %} bandithedoge</div>
 
     <div class="flex flex-col items-center text-sm">
         <span>generated with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></span>
-        <div class="text-xl flex flex-row w-full justify-evenly">
-            <a href="/feed.xml">{% fa name="rss" %}</a>
-            <a href="/sitemap.xml">{% fa name="sitemap" %}</a>
-            <a href="https://github.com/bandithedoge/www.bandithedoge.com">{% fa name="code" %}</a>
+        <div class="flex w-full flex-row justify-evenly text-xl">
+            <a href="/feed.xml">{% phosphor "rss" %}</a>
+            <a href="https://github.com/bandithedoge/www.bandithedoge.com">{% phosphor "code" %}</a>
         </div>
-</div>
+    </div>
 </footer>

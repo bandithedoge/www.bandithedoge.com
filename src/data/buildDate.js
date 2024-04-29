@@ -1,2 +1,2 @@
 const { DateTime } = require("luxon");
-module.exports = () => DateTime.now().toObject()
+module.exports = () => DateTime.now().toObject();

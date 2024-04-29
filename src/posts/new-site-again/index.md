@@ -10,13 +10,13 @@ So what does 11ty actually help with?
 
 Well... not much. Except that I have a much deeper understanding of this system than the previous one, so I have more room for fancy stuff. What fancy stuff?
 
-*Observe*.
+_Observe_.
 
 ```javascript
-const hello = ["oh", "god", "please", "make", "it", "stop"]
-let world = hello.join(" ")
+const hello = ["oh", "god", "please", "make", "it", "stop"];
+let world = hello.join(" ");
 
-console.log(world)
+console.log(world);
 ```
 
 ```haskell

@@ -1,14 +1,16 @@
 ---
 layout: base.html
 ---
-<!doctype html>
+
+<!DOCTYPE html>
 
 <main class="container">
     <div class="container flex justify-center">
-        <div class="p-8 w-fit bg-light2 text-center text-dark dark:bg-dark2 dark:text-light rounded">
+        <div class="w-fit rounded bg-light2 p-8 text-center text-dark dark:bg-dark2 dark:text-light">
             <h1 class="text-4xl font-bold">{{ title }}</h1>
             <span>Posted on {{ page.date | readableDate }}</span>
         </div>
     </div>
-    <div class="">{{ content | safe }}</div>
+    <br />
+    <div class="prose max-w-none dark:prose-invert">{{ content | safe }}</div>
 </main>
