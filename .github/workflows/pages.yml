@@ -30,7 +30,9 @@ jobs:
               uses: oven-sh/setup-bun@v2.0.1
 
             - name: Build 11ty site
-              run: bun run build
+              run: |
+                bun i
+                bun run build
 
             - name: Setup Pages
               uses: actions/configure-pages@v1
