@@ -1,6 +1,6 @@
 ---
 title: "~"
-layout: base.html
+layout: base.njk
 ---
 
 <div class="prose dark:prose-invert max-w-none">

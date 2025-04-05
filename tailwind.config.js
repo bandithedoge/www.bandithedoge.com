@@ -1,6 +1,6 @@
 module.exports = {
     mode: "jit",
-    content: ["./src/**/*.{md,html}"],
+    content: ["./src/**/*.{md,html,njk}"],
     plugins: [require("@tailwindcss/typography")],
     darkmode: true,
 

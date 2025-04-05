@@ -70,7 +70,7 @@ module.exports = function (c) {
             data: "data",
             layouts: "layouts",
         },
-        templateFormats: ["html", "md", "xml"],
+        templateFormats: ["html", "md", "xml", "njk"],
         htmlTemplateEngine: "njk",
     };
 };
