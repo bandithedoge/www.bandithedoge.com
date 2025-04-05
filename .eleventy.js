@@ -1,25 +1,29 @@
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginPostCss from "@jgarber/eleventy-plugin-postcss";
+import pluginSitemap from "@quasibit/eleventy-plugin-sitemap";
+import pluginPhosphorIcons from "eleventy-plugin-phosphoricons";
+
 import { DateTime } from "luxon";
 import markdownIt from "markdown-it";
-import anchor, { permalink as _permalink } from "markdown-it-anchor";
 import { parse } from "yaml";
-import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 
 export default async function (c) {
-    c.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
+    c.addPlugin(pluginSyntaxHighlight);
 
-    c.addPlugin(require("@11ty/eleventy-plugin-rss"));
+    c.addPlugin(pluginRss);
 
-    c.addPlugin(postcssPlugin, {
+    c.addPlugin(pluginPostCss, {
         templateFormats: ["scss"],
     });
 
-    c.addPlugin(require("@quasibit/eleventy-plugin-sitemap"), {
+    c.addPlugin(pluginSitemap, {
         sitemap: {
             hostname: "http://bandithedoge.com",
         },
     });
 
-    c.addPlugin(require("eleventy-plugin-phosphoricons"), {
+    c.addPlugin(pluginPhosphorIcons, {
         size: 24,
     });
 
@@ -43,8 +47,8 @@ export default async function (c) {
             breaks: true,
             linkify: true,
         })
-            .use(anchor, {
-                permalink: _permalink.ariaHidden({
+            .use(require("markdown-it-anchor"), {
+                permalink: require("markdown-it-anchor").permalink.ariaHidden({
                     placement: "after",
                     symbol: "#",
                 }),
