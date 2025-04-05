@@ -1,5 +1,6 @@
 ---
 title: new site (...again)
+date: 2022-08-12
 ---
 
 It's that time of year again. Yes, you got it right, it's time to completely rewrite this dumb website again and overengineer it even more just for me to forget about it for the next 2 years and do the thing again!
