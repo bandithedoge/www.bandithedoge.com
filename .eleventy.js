@@ -1,16 +1,16 @@
-const postcss = require("postcss");
-const { DateTime } = require("luxon");
-const markdownIt = require("markdown-it");
-const anchor = require("markdown-it-anchor");
-const yaml = require("yaml");
+import { DateTime } from "luxon";
+import markdownIt from "markdown-it";
+import anchor, { permalink as _permalink } from "markdown-it-anchor";
+import { parse } from "yaml";
+import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 
-module.exports = function (c) {
+export default async function (c) {
     c.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
 
     c.addPlugin(require("@11ty/eleventy-plugin-rss"));
 
-    c.addPlugin(require("eleventy-sass"), {
-        postcss: postcss([require("tailwindcss")]),
+    c.addPlugin(postcssPlugin, {
+        templateFormats: ["scss"],
     });
 
     c.addPlugin(require("@quasibit/eleventy-plugin-sitemap"), {
@@ -27,7 +27,7 @@ module.exports = function (c) {
         return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_FULL);
     });
 
-    c.addDataExtension("yaml", yaml.parse);
+    c.addDataExtension("yaml", parse);
 
     c.addPassthroughCopy({ "./src/static/": "/" });
     c.addPassthroughCopy("src/posts/**/*.gif");
@@ -44,7 +44,7 @@ module.exports = function (c) {
             linkify: true,
         })
             .use(anchor, {
-                permalink: anchor.permalink.ariaHidden({
+                permalink: _permalink.ariaHidden({
                     placement: "after",
                     symbol: "#",
                 }),
@@ -73,4 +73,4 @@ module.exports = function (c) {
         templateFormats: ["html", "md", "xml", "njk"],
         htmlTemplateEngine: "njk",
     };
-};
+}
