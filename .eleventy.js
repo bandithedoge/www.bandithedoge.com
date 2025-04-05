@@ -1,36 +1,33 @@
-import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginRss from "@11ty/eleventy-plugin-rss";
-import pluginPostCss from "@jgarber/eleventy-plugin-postcss";
-import pluginSitemap from "@quasibit/eleventy-plugin-sitemap";
-import pluginPhosphorIcons from "eleventy-plugin-phosphoricons";
-
-import { DateTime } from "luxon";
-import markdownIt from "markdown-it";
-import { parse } from "yaml";
-
 export default async function (c) {
+    const { default: pluginSyntaxHighlight } = await import("@11ty/eleventy-plugin-syntaxhighlight");
     c.addPlugin(pluginSyntaxHighlight);
 
+    const { default: pluginRss } = await import("@11ty/eleventy-plugin-rss");
     c.addPlugin(pluginRss);
 
+    const { default: pluginPostCss } = await import("@jgarber/eleventy-plugin-postcss");
     c.addPlugin(pluginPostCss, {
         templateFormats: ["scss"],
     });
 
+    const { default: pluginSitemap } = await import("@quasibit/eleventy-plugin-sitemap");
     c.addPlugin(pluginSitemap, {
         sitemap: {
             hostname: "http://bandithedoge.com",
         },
     });
 
+    const { default: pluginPhosphorIcons } = await import("eleventy-plugin-phosphoricons");
     c.addPlugin(pluginPhosphorIcons, {
         size: 24,
     });
 
+    const { DateTime } = await import("luxon");
     c.addFilter("readableDate", (date) => {
         return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_FULL);
     });
 
+    const { parse } = await import("yaml");
     c.addDataExtension("yaml", parse);
 
     c.addPassthroughCopy({ "./src/static/": "/" });
@@ -40,28 +37,37 @@ export default async function (c) {
 
     c.setServerPassthroughCopyBehavior("copy");
 
+    const { default: mit } = await import("markdown-it");
+    const { default: mitAnchor } = await import("markdown-it-anchor");
+    const { default: mitFootnote } = await import("markdown-it-footnote");
+    const { default: mitDeflist } = await import("markdown-it-deflist");
+    const { default: mitMark } = await import("markdown-it-mark");
+    const { default: mitToc } = await import("markdown-it-table-of-contents");
+    const { default: mitAttrs } = await import("markdown-it-attrs");
+    const { default: mitImageFigures } = await import("markdown-it-image-figures");
+
     c.setLibrary(
         "md",
-        markdownIt({
+        mit({
             html: true,
             breaks: true,
             linkify: true,
         })
-            .use(require("markdown-it-anchor"), {
-                permalink: require("markdown-it-anchor").permalink.ariaHidden({
+            .use(mitAnchor, {
+                permalink: mitAnchor.permalink.ariaHidden({
                     placement: "after",
                     symbol: "#",
                 }),
             })
-            .use(require("markdown-it-footnote"))
-            .use(require("markdown-it-deflist"))
-            .use(require("markdown-it-mark"))
-            .use(require("markdown-it-table-of-contents"), {
+            .use(mitFootnote)
+            .use(mitDeflist)
+            .use(mitMark)
+            .use(mitToc, {
                 listType: "ul",
                 includeLevel: [1, 2, 3, 4, 5, 6],
             })
-            .use(require("markdown-it-attrs"))
-            .use(require("markdown-it-image-figures"), {
+            .use(mitAttrs)
+            .use(mitImageFigures, {
                 dataType: true,
                 figcaption: "alt",
             })
