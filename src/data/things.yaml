@@ -1,3 +1,8 @@
+- type: github
+  owner: bandithedoge
+  repo: zigplug
+  year: 2024-present
+
 - type: remaster
   id: deusex
   name: "Deus Ex OST (Unofficial 2023 Remastered)"
@@ -8,6 +13,11 @@
   owner: bandithedoge
   repo: misstrhortion
   year: 2023-present
+
+- type: github
+  owner: bandithedoge
+  repo: devkitNix
+  year: 2022-present
 
 - type: remaster
   id: ut
