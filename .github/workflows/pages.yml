@@ -26,13 +26,11 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
-            - name: Setup Bun
-              uses: oven-sh/setup-bun@v2.0.1
+            - name: Setup Zig
+              uses: mlugg/setup-zig@v2
 
-            - name: Build 11ty site
-              run: |
-                bun i
-                bun run build
+            - name: Build
+              run: zig build
 
             - name: Setup Pages
               uses: actions/configure-pages@v1
@@ -40,7 +38,7 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: "./dist"
+                  path: "./zig-out"
 
             - name: Deploy to GitHub Pages
               id: deployment

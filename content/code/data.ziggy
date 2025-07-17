@@ -1,0 +1,32 @@
+{
+    .things = [
+        {
+            .owner = "bandithedoge",
+            .repo = "zigplug",
+        },
+        {
+            .owner = "bandithedoge",
+            .repo = "misstrhortion",
+        },
+        {
+            .owner = "bandithedoge",
+            .repo = "devkitNix",
+        },
+        {
+            .owner = "nvim-neorg",
+            .repo = "nixpkgs-neorg-overlay",
+        },
+        {
+            .owner = "bandithedoge",
+            .repo = "nur-packages",
+        },
+        {
+            .owner = "bandithedoge",
+            .repo = "nixpkgs-firefox-darwin",
+        },
+        {
+            .owner = "bandithedoge",
+            .repo = "switch-pl",
+        },
+    ],
+}

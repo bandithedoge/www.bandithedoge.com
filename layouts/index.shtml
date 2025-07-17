@@ -1,0 +1,44 @@
+<extend template="base.shtml">
+
+<!-- <title id="title">~</title> -->
+
+<head id="head">
+</head>
+
+<div id="content">
+    <style>
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #left {
+            font-size: 16pt;
+            text-align: left;
+            max-width: 400px;
+        }
+    </style>
+    <div id="home">
+        <div id="left">
+            Mikołaj Lercher,
+            <!-- ultra stupid way to calculate my age, 1970 year offset because unix -->
+            <abbr :text="$build.generated.sub(12546, 'day').format('2006').parseInt().plus(-1970)" title="May 8, 2004"></abbr>
+            <br>
+            Jelenia Góra, Poland
+            <br>
+            developer, musician, computer science student
+            <br>
+            <a href="https://ipa-reader.com/?text=b%C3%A6ndi-%C3%B0%C9%99-do%CA%8A%CA%A4&voice=Amy">bændi-ðə-doʊʤ</a>
+        </div>
+        <div id="right" style="text-align: right;">
+            <a href="https://github.com/bandithedoge">GitHub</a>
+            <br>
+            <a href="https://www.youtube.com/channel/UCMosYVHeaPgJ14Sd-qEubzg">YouTube (bandithedoge)</a>
+            <br>
+            <a href="https://www.youtube.com/@misadventuresinludomusicology">YouTube (misadventures in ludomusicology)</a>
+            <br>
+            <a href="https://keyoxide.org/aspe%3Akeyoxide.org%3A2S6HHPVTPT2IUBB5FZ5WGPCORI">aspe:keyoxide.org:2S6HHPVTPT2IUBB5FZ5WGPCORI</a>
+        </div>
+    </div>
+</div>

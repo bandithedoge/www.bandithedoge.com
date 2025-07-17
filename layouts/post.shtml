@@ -1,0 +1,74 @@
+<extend template="base.shtml">
+
+<head id="head">
+</head>
+
+<div id="content">
+    <style>
+        #title {
+            text-align: center;
+            padding: 5pt 0;
+        }
+
+        #title * {
+            margin: 5pt 0;
+        }
+
+        #title h1 {
+            margin: 0;
+        }
+
+        #title h2 {
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        #title h3 {
+            font-weight: normal;
+        }
+
+        #post {
+            font-family: serif;
+        }
+
+        .block {
+            padding: 10pt;
+            margin: 10pt;
+        }
+
+        .block h1 {
+            font-size: 16pt;
+        }
+
+        .block p {
+            margin: 10pt 0;
+        }
+
+        .warning {
+            border: solid;
+            border-width: 2pt;
+            border-color: var(--base0A);
+        }
+    </style>
+
+    <div id="title">
+        <h1 :text="$page.title"></h1>
+        <h2 :text="$page.description"></h2>
+        <h3 :text="$page.date.format('January 02, 2006')"></h3>
+    </div>
+
+    <hr>
+
+    <div id="post" :html="$page.content()"></div>
+
+    <hr>
+
+    <ctx :if="$page.footnotes?()">
+        <ol :loop="$if">
+            <ctx :html="$loop.it.html()"></ctx>
+            <ctx :loop="$loop.it.ref_ids">
+                <a href="$loop.it.prefix('#')" :html="$loop.idx"></a>
+            </ctx>
+        </ol>
+    </ctx>
+</div>

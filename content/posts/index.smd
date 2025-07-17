@@ -1,0 +1,12 @@
+---
+.title = "posts",
+.author = "Mikołaj Lercher",
+.date = "",
+.layout = "posts.shtml",
+.alternatives = [{
+    .name = "rss",
+    .type = "application/rss+xml",
+    .layout = "rss.xml",
+    .output = "index.xml",
+}],
+---

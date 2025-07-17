@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head id="head">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title id="title" :text="$page.title.suffix(' • bandithedoge')"></title>
+
+        <link rel="stylesheet" href="$site.asset('style.css').link()">
+
+        <super>
+    </head>
+    <body>
+        <style>
+            body {
+                max-width: 920px;
+                margin: 0 auto;
+                padding: 1rem;
+                font-family: sans-serif;
+            }
+
+            #bar {
+                display: flex;
+                font-size: 18pt;
+            }
+
+            #bar img {
+                max-width: 50pt;
+            }
+
+            #bar-links {
+                flex-grow: 1;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            #content {
+                margin: 10pt 0;
+            }
+        </style>
+
+        <div id="bar">
+            <a href="$site.link()"><img src="$site.asset('icon.png').link()" alt="bandithedoge" id="icon"></a>
+            <div id="bar-links">
+                <a href="$site.page('posts').link()">posts</a>
+                <a href="$site.page('code').link()">code</a>
+                <a href="$site.page('music').link()">music</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="content">
+            <super>
+        </div>
+    </body>
+</html>

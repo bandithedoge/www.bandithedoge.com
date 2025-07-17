@@ -1,0 +1,17 @@
+<extend template="base.shtml">
+
+<head id="head"></head>
+
+<div id="content">
+    <style>
+        .thing {
+            text-align: center;
+            margin: auto;
+            padding: 1em;
+        }
+    </style>
+
+    <div id="things">
+        <super>
+    </div>
+</div>

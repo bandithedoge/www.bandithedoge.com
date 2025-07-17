@@ -1,0 +1,14 @@
+.{
+    .name = .www_bandithedoge_com,
+    .version = "0.0.0",
+    .dependencies = .{
+        .zine = .{
+            .url = "git+https://github.com/kristoff-it/zine?ref=v0.10.3#e65c447bec821c9aeb58cd739157f4a180cdb3f2",
+            .hash = "zine-0.9.0-ou6nIKtYFgBK3KY-IQKTVF2JtxtWq0Fxe0oCtY9LIuit",
+        },
+    },
+    .fingerprint = 0x3179e3b0b858ebd7,
+    .minimum_zig_version = "0.14.1",
+
+    .paths = .{"."},
+}

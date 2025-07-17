@@ -1,0 +1,67 @@
+{
+    .things = [
+        {
+            .id = "deusex",
+            .name = "Deus Ex OST (Unofficial 2023 Remastered)",
+            .links = {.youtube = "https://www.youtube.com/watch?v=iVcg5pk0Hy0"},
+            .date = @date("2023-06-07"),
+        },
+        {
+            .id = "ut",
+            .name = "Unreal Tournament OST (Remastered)",
+            .links = {.youtube = "https://www.youtube.com/watch?v=CS36yiNl4QU"},
+            .date = @date("2022-08-28"),
+        },
+        {
+            .id = "gmbth",
+            .name = "grab me by the horns",
+            .links = {
+                .bandcamp = "https://bandithedoge.bandcamp.com/album/grab-me-by-the-horns-2",
+                .youtube = "https://www.youtube.com/watch?v=N5sjGoyXK3o&t=1380s",
+                .spotify = "https://open.spotify.com/album/2Z9PynHQDKFmFSirB9zvpj",
+            },
+            .date = @date("2022-09-30"),
+        },
+        {
+            .id = "indiscernible",
+            .name = "[indiscernible]",
+            .links = {
+                .bandcamp = "https://bandithedoge.bandcamp.com/album/indiscernible",
+                .youtube = "https://www.youtube.com/watch?v=omNmpW5kxB4",
+                .spotify = "https://open.spotify.com/album/4PEqct9F33lXklvcWotv9c",
+            },
+            .date = @date("2022-06-03"),
+        },
+        {
+            .id = "kulaworld",
+            .name = "Kula World OST (Remastered)",
+            .links = {.youtube = "https://www.youtube.com/watch?v=Pr0dFEoVwN8"},
+            .date = @date("2021-07-08"),
+        },
+        {
+            .id = "memories",
+            .name = "memories of the harder styles",
+            .links = {.youtube = "https://www.youtube.com/watch?v=Ryvg6k9el64"},
+            .date = @date("2021-01-27"),
+        },
+        {
+            .id = "imperceptible",
+            .name = "[imperceptible]",
+            .links = {
+                .bandcamp = "https://bandithedoge.bandcamp.com/album/imperceptible",
+                .youtube = "https://www.youtube.com/watch?v=v8Pi7VoFuw8",
+                .spotify = "https://open.spotify.com/album/1g1Jn373a7co5Vxk2f6oDd",
+            },
+            .date = @date("2021-03-06"),
+        },
+        {
+            .id = "inaudible",
+            .name = "[inaudible]",
+            .links = {
+                .bandcamp = "https://bandithedoge.bandcamp.com/album/inaudible-2",
+                .youtube = "https://www.youtube.com/watch?v=Ao0hmZTRavY",
+            },
+            .date = @date("2020-03-06"),
+        },
+    ],
+}

@@ -1,0 +1,28 @@
+<extend template="things.shtml">
+
+<div id="things" :loop="$page.asset('data.ziggy').ziggy().get('things')">
+    <style>
+        .thing {
+            display: flex;
+        }
+
+        .cover {
+            max-width: 200pt;
+        }
+
+        h1 {
+            margin: 0;
+        }
+    </style>
+
+    <div class="thing">
+        <img src="$page.asset($loop.it.get('id').suffix('.jpg')).link()" alt="$loop.it.get('name')" class="cover">
+        <div style="flex-grow: 1; margin: auto; display: grid;">
+            <h1 :text="$loop.it.get('name')"></h1>
+            <small :text="$loop.it.get('date').format('January 02, 2006')"></small>
+            <ctx :if="$loop.it.get('links').get?('bandcamp')"><a href="$if">Bandcamp</a></ctx>
+            <ctx :if="$loop.it.get('links').get?('youtube')"><a href="$if">YouTube</a></ctx>
+            <ctx :if="$loop.it.get('links').get?('spotify')"><a href="$if">Spotify</a></ctx>
+        </div>
+    </div>
+</div>

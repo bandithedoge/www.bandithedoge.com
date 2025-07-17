@@ -1,0 +1,23 @@
+<extend template="base.shtml">
+
+<head id="head">
+</head>
+
+<div id="content" style="align-items: center;">
+    <ctx alt="$page.alternative('rss')">
+        <div style="text-align: center; font-size: 18pt;">
+            <a href="$ctx.alt.link()" type="$ctx.alt.type">RSS feed</a>
+        </div>
+    </ctx>
+    <ul>
+        <div :loop="$page.subpages()">
+            <li>
+                <a href="$loop.it.link()" :text="$loop.it.title"></a>
+                <br>
+                <i :text="$loop.it.description"></i>
+                <br>
+                <small :text="$loop.it.date.format('January 02, 2006')"></small>
+            </li>
+        </div>
+    </ul>
+</div>

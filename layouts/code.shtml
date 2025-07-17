@@ -1,0 +1,16 @@
+<extend template="things.shtml">
+
+<div id="things" :loop="$page.asset('data.ziggy').ziggy().get('things')">
+    <style>
+        #things {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+
+    <div class="thing">
+        <a href="$loop.it.get('owner').suffix('/').suffix($loop.it.get('repo')).prefix('https://github.com/')">
+            <img src="$loop.it.get('owner').suffix('&repo=').suffix($loop.it.get('repo')).suffix('&show_owner=true').prefix('https://github-readme-stats.vercel.app/api/pin/?username=')" alt="$loop.it.get('repo')">
+        </a>
+    </div>
+</div>

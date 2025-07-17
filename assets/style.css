@@ -1,0 +1,35 @@
+:root {
+    --base00: #1F1F28;
+    --base01: #2A2A37;
+    --base02: #363646;
+    --base03: #54546D;
+    --base04: #C8C093;
+    --base05: #DCD7BA;
+    --base06: #DCD7BA;
+    --base07: #DCD7BA;
+    --base08: #E46876;
+    --base09: #FFA066;
+    --base0A: #E6C384;
+    --base0B: #98BB6C;
+    --base0C: #7AA89F;
+    --base0D: #7E9CD8;
+    --base0E: #957FB8;
+    --base0F: #A3D4D5;
+}
+
+body {
+    background-color: var(--base00);
+    color: var(--base05);
+}
+
+a {
+    color: var(--base0F);
+}
+
+a:visited {
+    color: var(--base0E);
+}
+
+hr {
+    color: var(--base03);
+}
