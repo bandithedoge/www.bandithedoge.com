@@ -61,9 +61,8 @@
 
     <div id="post" :html="$page.content()"></div>
 
-    <hr>
-
     <ctx :if="$page.footnotes?()">
+        <hr>
         <ol :loop="$if">
             <ctx :html="$loop.it.html()"></ctx>
             <ctx :loop="$loop.it.ref_ids">
