@@ -20,7 +20,7 @@
       perSystem =
         { pkgs, system, ... }:
         let
-          zig' = inputs.zig.packages.${system}."0_14_1";
+          zig' = inputs.zig.packages.${system}.default;
         in
         {
           devShells.default = pkgs.mkShell {

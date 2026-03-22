@@ -1,32 +1,34 @@
 {
     .things = [
         {
-            .owner = "bandithedoge",
-            .repo = "zigplug",
+            .name = "scrob",
+            .description = "Lightweight, standalone scrobbling daemon for MPD",
+            .type = "codeberg",
+            .repo = "bandithedoge/scrob",
         },
         {
-            .owner = "bandithedoge",
-            .repo = "misstrhortion",
+            .name = "zmpd",
+            .description = "Music Player Daemon client library in pure Zig",
+            .type = "github",
+            .repo = "bandithedoge/zmpd",
         },
         {
-            .owner = "bandithedoge",
-            .repo = "devkitNix",
+            .name = "pugl.zig",
+            .description = "Zig bindings for Pugl, a minimal portable API for embeddable GUIs",
+            .type = "github",
+            .repo = "bandithedoge/pugl.zig",
         },
         {
-            .owner = "nvim-neorg",
-            .repo = "nixpkgs-neorg-overlay",
+            .name = "zigplug",
+            .description = "WIP Zig audio plugin framework",
+            .type = "github",
+            .repo = "bandithedoge/zigplug",
         },
         {
-            .owner = "bandithedoge",
-            .repo = "nur-packages",
-        },
-        {
-            .owner = "bandithedoge",
-            .repo = "nixpkgs-firefox-darwin",
-        },
-        {
-            .owner = "bandithedoge",
-            .repo = "switch-pl",
+            .name = "nur-packages",
+            .description = "Nix derivations for things I find useful",
+            .type = "github",
+            .repo = "bandithedoge/nur-packages",
         },
     ],
 }

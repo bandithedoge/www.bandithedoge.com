@@ -3,4 +3,9 @@
 .author = "Mikołaj Lercher",
 .date = "",
 .layout = "code.shtml",
+.custom = {
+    .github = "https://github.com/",
+    .codeberg = "https://codeberg.org/",
+    .shields = "https://img.shields.io/"
+},
 ---

@@ -1,7 +1,5 @@
 <extend template="base.shtml">
 
-<!-- <title id="title">~</title> -->
-
 <head id="head">
 </head>
 
@@ -52,6 +50,8 @@
         </div>
         <div id="right">
             <a href="https://github.com/bandithedoge">GitHub</a> / <a href="https://codeberg.org/bandithedoge">Codeberg</a>
+            <br>
+            <a rel="me" href="https://hostux.social/@bandithedoge">Mastodon</a>
             <br>
             <a href="https://www.youtube.com/channel/UCMosYVHeaPgJ14Sd-qEubzg">YouTube (bandithedoge)</a>
             <br>

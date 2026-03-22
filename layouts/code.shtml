@@ -1,22 +1,33 @@
-<extend template="things.shtml">
+<div id="things">
+	<ul :loop="$page.asset('data.ziggy').ziggy().get('things')">
+		<li>
+			<span>
+				<strong>
+					<a href="$page.custom.get($loop.it.get('type')).suffix($loop.it.get('repo'))" :text="$loop.it.get('name')"></a>
+				</strong>
+				-
+				<span :text="$loop.it.get('description')"></span>
+			</span>
 
-<div id="things" :loop="$page.asset('data.ziggy').ziggy().get('things')">
-    <style>
-        #things {
-            display: flex;
-            flex-wrap: wrap;
-        }
+			<br>
 
-        @media screen and (max-width: 500px) {
-            #things img {
-                max-width: 100%;
-            }
-        }
-    </style>
+			<div :if="$loop.it.get('type').eql('github')">
+				<img src="$page.custom.get('shields').suffix('github/last-commit/', $loop.it.get('repo'))"
+				     alt="$loop.it.get('repo').prefix('Last commit for ')"
+				>
+				<img src="$page.custom.get('shields').suffix('github/stars/', $loop.it.get('repo'))"
+				     alt="$loop.it.get('repo').prefix('Stars for ')"
+				>
+			</div>
 
-    <div class="thing">
-        <a href="$loop.it.get('owner').suffix('/').suffix($loop.it.get('repo')).prefix('https://github.com/')">
-            <img src="$loop.it.get('owner').suffix('&repo=').suffix($loop.it.get('repo')).suffix('&show_owner=true').prefix('https://github-readme-stats.vercel.app/api/pin/?username=')" alt="$loop.it.get('repo')">
-        </a>
-    </div>
+			<div :if="$loop.it.get('type').eql('codeberg')">
+				<img src="$page.custom.get('shields').suffix('gitea/last-commit/', $loop.it.get('repo'), '?gitea_url=https%3A%2F%2Fcodeberg.org')"
+				     alt="$loop.it.get('repo').prefix('Last commit for ')"
+				>
+				<img src="$page.custom.get('shields').suffix('gitea/stars/', $loop.it.get('repo'), '?gitea_url=https%3A%2F%2Fcodeberg.org')"
+				     alt="$loop.it.get('repo').prefix('Stars for ')"
+				>
+			</div>
+		</li>
+	</ul>
 </div>
