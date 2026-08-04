@@ -1,11 +1,5 @@
 ---
 .title = "code",
-.author = "Mikołaj Lercher",
-.date = "",
+.date = .unix(0),
 .layout = "code.shtml",
-.custom = {
-    .github = "https://github.com/",
-    .codeberg = "https://codeberg.org/",
-    .shields = "https://img.shields.io/"
-},
 ---

@@ -1,33 +1,43 @@
-<div id="things">
-	<ul :loop="$page.asset('data.ziggy').ziggy().get('things')">
-		<li>
-			<span>
-				<strong>
-					<a href="$page.custom.get($loop.it.get('type')).suffix($loop.it.get('repo'))" :text="$loop.it.get('name')"></a>
-				</strong>
-				-
-				<span :text="$loop.it.get('description')"></span>
-			</span>
+<extend template="base.shtml">
 
-			<br>
+<head id="head"></head>
 
-			<div :if="$loop.it.get('type').eql('github')">
-				<img src="$page.custom.get('shields').suffix('github/last-commit/', $loop.it.get('repo'))"
-				     alt="$loop.it.get('repo').prefix('Last commit for ')"
-				>
-				<img src="$page.custom.get('shields').suffix('github/stars/', $loop.it.get('repo'))"
-				     alt="$loop.it.get('repo').prefix('Stars for ')"
-				>
-			</div>
+<div id="content">
+	<ctx data="$page.asset('data.ziggy').ziggy()" urls="$ctx.data.get('urls')">
+		<ul :loop="$ctx.data.get('things')">
+			<ctx type="$loop.it.get('type')">
+				<li>
+					<span>
+						<strong>
+							<a href="$ctx.urls.get($ctx.type).suffix($loop.it.get('repo'))" :text="$loop.it.get('name')"></a>
+						</strong>
+						-
+						<span :text="$loop.it.get('description')"></span>
+					</span>
 
-			<div :if="$loop.it.get('type').eql('codeberg')">
-				<img src="$page.custom.get('shields').suffix('gitea/last-commit/', $loop.it.get('repo'), '?gitea_url=https%3A%2F%2Fcodeberg.org')"
-				     alt="$loop.it.get('repo').prefix('Last commit for ')"
-				>
-				<img src="$page.custom.get('shields').suffix('gitea/stars/', $loop.it.get('repo'), '?gitea_url=https%3A%2F%2Fcodeberg.org')"
-				     alt="$loop.it.get('repo').prefix('Stars for ')"
-				>
-			</div>
-		</li>
-	</ul>
+					<br>
+
+					<ctx shields="$ctx.urls.get('shields')" repo="$loop.it.get('repo')">
+						<div :if="$ctx.type.eql('github')">
+							<img src="$ctx.shields.suffix('github/last-commit/', $ctx.repo)"
+							     alt="$ctx.repo.prefix('Last commit for ')"
+							>
+							<img src="$ctx.shields.suffix('github/stars/', $ctx.repo)"
+							     alt="$ctx.repo.prefix('Stars for ')"
+							>
+						</div>
+
+						<div :if="$ctx.type.eql('codeberg')">
+							<img src="$ctx.shields.suffix('gitea/last-commit/', $ctx.repo, '?gitea_url=https%3A%2F%2Fcodeberg.org')"
+							     alt="$ctx.repo.prefix('Last commit for ')"
+							>
+							<img src="$ctx.shields.suffix('gitea/stars/', $ctx.repo, '?gitea_url=https%3A%2F%2Fcodeberg.org')"
+							     alt="$ctx.repo.prefix('Stars for ')"
+							>
+						</div>
+					</ctx>
+				</li>
+			</ctx>
+		</ul>
+	</ctx>
 </div>

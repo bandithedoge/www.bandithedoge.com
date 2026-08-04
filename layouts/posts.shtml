@@ -6,7 +6,7 @@
 <div id="content" style="align-items: center;">
     <ctx alt="$page.alternative('rss')">
         <div style="text-align: center; font-size: 18pt;">
-            <a href="$ctx.alt.link()" type="$ctx.alt.type">RSS feed</a>
+            <a href="$ctx.alt.link()">RSS feed</a>
         </div>
     </ctx>
     <ul>

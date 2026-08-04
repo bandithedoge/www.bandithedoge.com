@@ -1,0 +1,24 @@
+$ = Things
+
+struct Things {
+    things: []Thing,
+    urls: Urls,
+}
+
+struct Thing {
+    name: bytes,
+    description: bytes,
+    type: RepoType,
+    repo: bytes,
+}
+
+union RepoType {
+    codeberg,
+    github,
+}
+
+struct Urls {
+    github: bytes,
+    codeberg: bytes,
+    shields: bytes,
+}

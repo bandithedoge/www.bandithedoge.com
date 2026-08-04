@@ -1,34 +1,23 @@
 {
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    zig = {
-      url = "github:bandithedoge/zig-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-  };
-
   outputs =
-    inputs@{ flake-parts, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
-      perSystem =
-        { pkgs, system, ... }:
+    { self, ... }@args:
+    let
+      inputs = (import ./.tack) { overrides = args.tackOverrides or { }; };
+      forAllSystems = inputs.nixpkgs.lib.genAttrs inputs.nixpkgs.lib.platforms.all;
+    in
+    {
+      devShells = forAllSystems (
+        system:
         let
-          zig' = inputs.zig.packages.${system}.default;
+          pkgs = import inputs.nixpkgs { inherit system; };
         in
         {
-          devShells.default = pkgs.mkShell {
+          default = pkgs.mkShell {
             packages = [
-              zig'
-              zig'.zls
+              inputs.nur-bandithedoge.legacyPackages.${system}.zine-bin
             ];
           };
-        };
+        }
+      );
     };
 }

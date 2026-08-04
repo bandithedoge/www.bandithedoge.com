@@ -1,0 +1,12 @@
+[shorturls]
+# gh = "github:{path}"
+
+# all_follow maps input names to the top-level pin they follow
+# opt out per-input with exclude_follow
+[all_follow]
+# nixpkgs = "nixpkgs"
+# nixpkgs = ["nixpkgs-stable", "nixpkgs-unstable"]
+
+[inputs]
+nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable"
+nur-bandithedoge.url = "github:bandithedoge/nur-packages"

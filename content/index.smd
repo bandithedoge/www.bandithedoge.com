@@ -1,6 +1,6 @@
 ---
 .title = "~",
-.author = "Mikołaj Lercher",
-.date = "",
+.authors = ["Mikołaj Lercher"],
+.date = .unix(0),
 .layout = "index.shtml",
 ---

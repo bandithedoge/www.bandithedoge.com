@@ -1,0 +1,19 @@
+$ = Things
+
+struct Things {
+    original: []Thing,
+    remasters: []Thing,
+}
+
+struct Thing {
+    id: bytes,
+    name: bytes,
+    links: Links,
+    date: bytes,
+}
+
+struct Links {
+    bandcamp: ?bytes,
+    youtube: ?bytes,
+    spotify: ?bytes,
+}

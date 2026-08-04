@@ -6,6 +6,7 @@ on:
     workflow_dispatch:
     schedule:
         - cron: 0 0 1 1 *
+        - cron: 0 0 8 5 *
 
 permissions:
     contents: read
@@ -26,20 +27,20 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
-            - name: Setup Zig
-              uses: mlugg/setup-zig@v2
+            - name: Setup Zine
+              uses: kristoff-it/setup-zine@v2
 
             - name: Build
-              run: zig build
+              run: zine release
 
             - name: Setup Pages
-              uses: actions/configure-pages@v1
+              uses: actions/configure-pages@v5
 
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: "./zig-out"
+                  path: public
 
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@main
+              uses: actions/deploy-pages@v4

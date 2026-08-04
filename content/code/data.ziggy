@@ -1,34 +1,61 @@
-{
-    .things = [
-        {
-            .name = "scrob",
-            .description = "Lightweight, standalone scrobbling daemon for MPD",
-            .type = "codeberg",
-            .repo = "bandithedoge/scrob",
-        },
-        {
-            .name = "zmpd",
-            .description = "Music Player Daemon client library in pure Zig",
-            .type = "github",
-            .repo = "bandithedoge/zmpd",
-        },
-        {
-            .name = "pugl.zig",
-            .description = "Zig bindings for Pugl, a minimal portable API for embeddable GUIs",
-            .type = "github",
-            .repo = "bandithedoge/pugl.zig",
-        },
-        {
-            .name = "zigplug",
-            .description = "WIP Zig audio plugin framework",
-            .type = "github",
-            .repo = "bandithedoge/zigplug",
-        },
-        {
-            .name = "nur-packages",
-            .description = "Nix derivations for things I find useful",
-            .type = "github",
-            .repo = "bandithedoge/nur-packages",
-        },
-    ],
-}
+.things = [
+    .{
+        .name = "dvui-pugl",
+        .description = "Pugl backend for DVUI",
+        .type = .codeberg,
+        .repo = "bandithedoge/dvui-pugl",
+    },
+    .{
+        .name = "clap-wrapper.zig",
+        .description = "clap-wrapper for the Zig build system",
+        .type = .codeberg,
+        .repo = "bandithedoge/clap-wrapper.zig",
+    },
+    .{
+        .name = "scrob",
+        .description = "Lightweight, standalone scrobbling daemon for MPD",
+        .type = .codeberg,
+        .repo = "bandithedoge/scrob",
+    },
+    .{
+        .name = "zmpd",
+        .description = "Music Player Daemon client library in pure Zig",
+        .type = .github,
+        .repo = "bandithedoge/zmpd",
+    },
+    .{
+        .name = "pugl.zig",
+        .description = "Zig bindings for Pugl, a minimal portable API for embeddable GUIs",
+        .type = .github,
+        .repo = "bandithedoge/pugl.zig",
+    },
+    .{
+        .name = "zigplug",
+        .description = "WIP Zig audio plugin framework",
+        .type = .codeberg,
+        .repo = "bandithedoge/zigplug",
+    },
+    .{
+        .name = "nur-packages",
+        .description = "Nix derivations for things I find useful",
+        .type = .github,
+        .repo = "bandithedoge/nur-packages",
+    },
+    .{
+        .name = "clusterfuck",
+        .description = "My NixOS and adjaecent configurations",
+        .type = .codeberg,
+        .repo = "bandithedoge/clusterfuck",
+    },
+    .{
+        .name = "www.bandithedoge.com",
+        .description = "This very website",
+        .type = .github,
+        .repo = "bandithedoge/www.bandithedoge.com",
+    },
+],
+.urls = .{
+    .github = "https://github.com/",
+    .codeberg = "https://codeberg.org/",
+    .shields = "https://img.shields.io/",
+},

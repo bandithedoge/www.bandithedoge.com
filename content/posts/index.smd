@@ -1,9 +1,8 @@
 ---
 .title = "posts",
-.author = "Mikołaj Lercher",
-.date = "",
 .layout = "posts.shtml",
-.alternatives = [{
+.date = .unix(0),
+.alternatives = [.{
     .name = "rss",
     .type = "application/rss+xml",
     .layout = "rss.xml",
