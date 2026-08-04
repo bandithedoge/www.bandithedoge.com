@@ -7,3 +7,4 @@
     .assets_dir_path = "assets",
     .static_assets = ["favicon.ico"],
 }),
+

@@ -10,3 +10,4 @@
 [inputs]
 nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable"
 nur-bandithedoge.url = "github:bandithedoge/nur-packages"
+treefmt-nix.url = "github:numtide/treefmt-nix"
