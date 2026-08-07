@@ -5,6 +5,5 @@
     .layouts_dir_path = "layouts",
     .content_dir_path = "content",
     .assets_dir_path = "assets",
-    .static_assets = ["favicon.ico"],
+    .static_assets = ["favicon.ico", "88x31.png", "88x31.gif"],
 }),
-
