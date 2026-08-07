@@ -1,0 +1,7 @@
+$ = []Button
+
+struct Button {
+    alt: bytes,
+    img: bytes,
+    url: bytes,
+}

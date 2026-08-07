@@ -34,22 +34,20 @@
 				justify-content: space-around;
 				align-items: center;
 			}
-			
-			#content {
-				margin: 10pt 0;
-			}
 		</style>
 
-		<div id="bar">
-			<a href="$site.link()"><img src="$site.asset('icon.png').link()" alt="bandithedoge" id="icon"></a>
-			<div id="bar-links">
-				<a href="$site.page('posts').link()">posts</a>
-				<a href="$site.page('code').link()">code</a>
-				<a href="$site.page('music').link()">music</a>
+		<header>
+			<div id="bar">
+				<a href="$site.link()"><img src="$site.asset('icon.png').link()" alt="bandithedoge" id="icon"></a>
+				<div id="bar-links">
+					<a href="$site.page('posts').link()">posts</a>
+					<a href="$site.page('code').link()">code</a>
+					<a href="$site.page('music').link()">music</a>
+				</div>
 			</div>
-		</div>
 
-		<hr>
+			<hr style="width: 100%">
+		</header>
 
 		<div id="content">
 			<super>

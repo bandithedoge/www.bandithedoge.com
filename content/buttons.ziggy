@@ -1,0 +1,17 @@
+[
+    .{
+        .alt = "nea",
+        .img = "https://nea.moe/%F0%9F%92%80%F0%9F%A5%80%F0%9F%A5%80%F0%9F%A5%80/mypenisisverysmall.png",
+        .url = "https://nea.moe",
+    },
+    .{
+        .alt = "amy",
+        .img = "https://amy.rip/88x31.png",
+        .url = "https://amy.rip",
+    },
+    .{
+        .alt = "houl",
+        .img = "https://houl.wtf/assets/images/buttons/houl.png",
+        .url = "https://houl.wtf"
+    },
+]

@@ -5,6 +5,12 @@
 
 <div id="content">
 	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			height: 100%
+		}
+		
 		#home {
 			display: flex;
 			align-items: center;
@@ -35,6 +41,21 @@
 				margin: 10pt;
 			}
 		}
+		
+		#friends {
+			display: grid;
+			justify-content: center;
+			text-align: center;
+			margin: 1em;
+		}
+		
+		#friends .buttons a {
+			text-decoration: none;
+		}
+
+		#friends h3 {
+		    margin: 4pt;
+		}
 	</style>
 	<div id="home">
 		<div id="left">
@@ -59,6 +80,24 @@
 			<a href="https://www.youtube.com/@misadventuresinludomusicology">YouTube (misadventures in ludomusicology)</a>
 			<br>
 			<a href="https://keyoxide.org/aspe%3Akeyoxide.org%3A2S6HHPVTPT2IUBB5FZ5WGPCORI">aspe:keyoxide.org:2S6HHPVTPT2IUBB5FZ5WGPCORI</a>
+		</div>
+	</div>
+
+	<div id="friends">
+		<div>
+			<h3>friends:</h3>
+			<div class="buttons" :loop="$page.asset('buttons.ziggy').ziggy()">
+				<a href="$loop.it.get('url')">
+					<img src="$loop.it.get('img')" alt="$loop.it.get('alt')">
+				</a>
+			</div>
+			<h3>add me to your site:</h3>
+			<div class="buttons">
+				<ctx anim="$site.asset('88x31.gif').link()" static="$site.asset('88x31.png').link()">
+					<a href="$ctx.anim"><img src="$ctx.anim" alt="bandithedoge (animated)"></a>
+					<a href="$ctx.static"><img src="$ctx.static" alt="bandithedoge (static)"></a>
+				</ctx>
+			</div>
 		</div>
 	</div>
 </div>
