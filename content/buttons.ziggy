@@ -12,6 +12,11 @@
     .{
         .alt = "houl",
         .img = "https://houl.wtf/assets/images/buttons/houl.png",
-        .url = "https://houl.wtf"
+        .url = "https://houl.wtf",
+    },
+    .{
+        .alt = "innocentzero",
+        .img = "https://innocentzero.is-a.dev/assets/x8831/nosystemissafe.gif",
+        .url = "https://innocentzero.is-a.dev",
     },
 ]
