@@ -19,4 +19,9 @@
         .img = "https://innocentzero.is-a.dev/assets/x8831/nosystemissafe.gif",
         .url = "https://innocentzero.is-a.dev",
     },
+    .{
+        .alt = "grunge",
+        .img = "https://grunge.floof.company/assets/button/button_dark.avif",
+        .url = "https://grunge.floof.company",
+    },
 ]
